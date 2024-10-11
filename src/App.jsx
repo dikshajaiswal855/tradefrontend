@@ -6,6 +6,7 @@ import Pricing from "./pages/Pricing";
 import Docs from "./pages/Docs";
 import Support from "./pages/Support";
 import Calculate from "./pages/Calculate";
+import Login from "./components/Login";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/docs" element={<Docs />} />
         <Route path="/support" element={<Support />} />
         <Route path="/calculate" element={<Calculate />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
