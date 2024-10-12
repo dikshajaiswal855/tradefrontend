@@ -56,7 +56,7 @@ const SignUp = ({ theme, toggleTheme }) => {
   };
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center overflow-hidden pt-[150px] md:pt-0 h-[100vh]">
       <div>
         <h1 className="text-2xl font-bold">Welcome Back! Please Log In</h1>
         <div className="flex flex-col justify-center items-center gap-2 my-2 text-sm">
