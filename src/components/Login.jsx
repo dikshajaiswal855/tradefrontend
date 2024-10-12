@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-[90vh]">
         <div>
           <h1 className="text-2xl font-bold">Welcome Back! Please Log In</h1>
           <div className="flex flex-col justify-center items-center gap-5 my-6 text-sm">

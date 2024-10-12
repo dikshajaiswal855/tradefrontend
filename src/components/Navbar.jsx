@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import burger from "../assets/burger.png";
 import cross from "../assets/cross.png";
@@ -7,12 +7,32 @@ import cross from "../assets/cross.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [url, seturl] = useState("");
+
+  const location = useLocation();
+
+  const routsArray = [
+    { name: "Home", path: "/" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Docs", path: "/docs" },
+    { name: "Support", path: "/support" },
+    { name: "Calculate", path: "/calculate" },
+  ];
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    seturl(window.location.pathname);
+  }, [location]);
+
   return (
-    <nav className="flex fixed w-full bg-white justify-between items-center shadow-md p-4 px-6 lg:px-16">
+    <nav
+      className={`flex fixed w-full bg-white justify-between items-center ${
+        url == "/login" || url == "/signup" ? "border-none" : "border-b"
+      } p-4 px-6 lg:px-16`}
+    >
       {/* Logo */}
       <div className="nav_logo_name">
         <Link to="/">
@@ -21,32 +41,39 @@ const Navbar = () => {
       </div>
 
       {/* Full Navigation for larger screens */}
-      <div className="hidden lg:flex space-x-6">
-        <Link to="/" className="text-blue-500 py-1 px-2">
-          Home
-        </Link>
-        <Link to="/pricing" className="hover:bg-[#E3EBFD] rounded-lg py-1 px-2">
-          Pricing
-        </Link>
-        <Link to="/docs" className="hover:bg-[#E3EBFD] rounded-lg py-1 px-2">
-          Docs
-        </Link>
-        <Link to="/support" className="hover:bg-[#E3EBFD] rounded-lg py-1 px-2">
-          Support
-        </Link>
-        <Link
-          to="/calculate"
-          className="hover:bg-[#E3EBFD] rounded-lg py-1 px-2"
-        >
-          Calculate
-        </Link>
+      <div
+        className={`${
+          url == "/login" || url == "/signup" ? "lg:hidden" : "lg:flex"
+        } hidden space-x-6`}
+      >
+        {routsArray.map((route, index) => (
+          <Link
+            key={index}
+            to={route.path}
+            className={`${
+              url == route.path ? "text-blue-500" : ""
+            } hover:bg-[#E3EBFD] rounded-lg py-1 px-2`}
+          >
+            {route.name}
+          </Link>
+        ))}
       </div>
 
       {/* Login Button */}
-      <div className="hidden lg:block">
-        <button className="bg-[#407BFF] hover:bg-blue-400 text-white px-4 py-2 rounded">
-          Login
-        </button>
+      <div
+        className={`${
+          url == "/login" || url == "/signup" ? "lg:hidden" : "lg:flex"
+        } hidden lg:block `}
+      >
+        <Link
+          to="/login"
+          onClick={toggleMobileMenu}
+          className=" w-full flex justify-center items-center"
+        >
+          <button className="bg-[#407BFF] hover:bg-blue-400 text-white px-4 py-2 rounded">
+            Login
+          </button>
+        </Link>
       </div>
 
       {/* Hamburger menu for mobile */}
