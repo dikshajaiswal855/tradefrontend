@@ -4,7 +4,7 @@ import map from "../assets/map2.svg";
 const Home = ({ theme, toggleTheme }) => {
   return (
     <div
-      className={`flex justify-center px-[24px] md:px-[] flex-col items-center transition-all duration-500 ease-in-out ${
+      className={`flex justify-center px-[24px] md:px-[] flex-col items-center transition-all duration-500 ease-in-out overflow-hidden ${
         theme === "light" ? "text-[#222222] bg-white" : "text-white bg-gray-900"
       }`}
     >
