@@ -4,8 +4,7 @@ import logo from "../assets/logo.png";
 import burger from "../assets/burger.png";
 import cross from "../assets/cross.png";
 import darklogo from "../assets/logodarkbg.png";
-import moon from "../assets/moonn.png";  // Icon for dark mode
-// import sun from "../assets/brightness.png";   // Icon for light mode
+import moon from "../assets/moonn.png";  
 import sun from "../assets/brightness (1).png"; 
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -56,7 +55,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             to={route.path}
             className={`${
               url == route.path ? "text-blue-500" : ""
-            } hover:bg-[#E3EBFD] rounded-lg py-1 px-2`}
+            } hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg py-1 px-2`}
           >
             {route.name}
           </Link>
@@ -135,28 +134,28 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Link
             to="/pricing"
             onClick={toggleMobileMenu}
-            className="ml-4 w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] rounded-lg"
+            className="ml-4 w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
             Pricing
           </Link>
           <Link
             to="/docs"
             onClick={toggleMobileMenu}
-            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] rounded-lg"
+            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
             Docs
           </Link>
           <Link
             to="/support"
             onClick={toggleMobileMenu}
-            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] rounded-lg"
+            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
             Support
           </Link>
           <Link
             to="/calculate"
             onClick={toggleMobileMenu}
-            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] rounded-lg"
+            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
             Calculate
           </Link>
