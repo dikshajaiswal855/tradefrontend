@@ -67,7 +67,8 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id=""
               placeholder="Enter your name"
-              className=" border-[2px] rounded-md p-2 w-full"
+              className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
+              // {`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
@@ -79,7 +80,7 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id="PhnNo"
               placeholder="Enter your phone number"
-              className="NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full"
+              className={`NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
             />
@@ -90,8 +91,8 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id="country"
               className={`border-[2px] rounded-md p-2 w-full ${
-                country === "" ? "text-gray-400" : "text-black"
-              }`}
+                country === "" ? "text-gray-400" : "text-grey-800"
+              } ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
               onChange={(e) => setCountry(e.target.value)}
             >
               <option value="" className="text-gray-300">
@@ -102,7 +103,7 @@ const SignUp = ({ theme, toggleTheme }) => {
                   <option
                     key={index}
                     value={country.value}
-                    className="text-black"
+                    className={`${theme === "light" ? "bg-white " : "bg-gray-600"} `}
                   >
                     {country.name}
                   </option>
@@ -117,7 +118,7 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id=""
               placeholder="Enter your email"
-              className=" border-[2px] rounded-md p-2 w-full"
+              className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

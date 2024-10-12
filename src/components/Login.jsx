@@ -38,7 +38,7 @@ const Login = ({ theme, toggleTheme }) => {
                 name=""
                 id=""
                 placeholder="Enter your email"
-                className=" border-[2px] rounded-md p-2 w-full"
+                className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
