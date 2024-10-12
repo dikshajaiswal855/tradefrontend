@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //assests
 import GoogleLogo from "../assets/Google__G__logo.svg.png";
 
-const Login = () => {
+const Login = ({ theme, toggleTheme }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -51,7 +51,7 @@ const Login = () => {
                   name=""
                   id="password"
                   placeholder="Enter your password"
-                  className="outline-none w-[88%] px-2"
+                  className={`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

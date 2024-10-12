@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //assests
 import GoogleLogo from "../assets/Google__G__logo.svg.png";
 
-const SignUp = () => {
+const SignUp = ({ theme, toggleTheme }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -56,7 +56,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[90vh]">
+    <div className="flex justify-center items-center ">
       <div>
         <h1 className="text-2xl font-bold">Welcome Back! Please Log In</h1>
         <div className="flex flex-col justify-center items-center gap-2 my-2 text-sm">
@@ -130,7 +130,7 @@ const SignUp = () => {
                 name=""
                 id="password"
                 placeholder="Enter your password"
-                className="outline-none w-[88%] px-2"
+                className={`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
