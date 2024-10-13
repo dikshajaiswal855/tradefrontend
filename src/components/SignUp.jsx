@@ -67,7 +67,9 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id=""
               placeholder="Enter your name"
-              className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
+              className={` border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white" : "bg-gray-900"
+              }`}
               // {`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
@@ -80,7 +82,9 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id="PhnNo"
               placeholder="Enter your phone number"
-              className={`NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
+              className={`NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white" : "bg-gray-900"
+              }`}
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
             />
@@ -103,7 +107,9 @@ const SignUp = ({ theme, toggleTheme }) => {
                   <option
                     key={index}
                     value={country.value}
-                    className={`${theme === "light" ? "bg-white " : "bg-gray-600"} `}
+                    className={`${
+                      theme === "light" ? "bg-white " : "bg-gray-600"
+                    } `}
                   >
                     {country.name}
                   </option>
@@ -118,7 +124,9 @@ const SignUp = ({ theme, toggleTheme }) => {
               name=""
               id=""
               placeholder="Enter your email"
-              className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
+              className={` border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white " : "bg-gray-900"
+              }`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -131,7 +139,9 @@ const SignUp = ({ theme, toggleTheme }) => {
                 name=""
                 id="password"
                 placeholder="Enter your password"
-                className={`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
+                className={`outline-none w-[88%] px-2 ${
+                  theme === "light" ? "bg-white" : "bg-gray-900"
+                }`}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -154,9 +164,11 @@ const SignUp = ({ theme, toggleTheme }) => {
               onChange={(e) => setIsTermsAndConditionsChecked(e.target.checked)}
             />
             <span>I accept the </span>
-            <span className="cursor-pointer hover:underline text-[#407BFF]">
-              Terms and Conditions
-            </span>
+            <Link to={"/termsAndConditions"}>
+              <span className="cursor-pointer hover:underline text-[#407BFF]">
+                Terms and Conditions
+              </span>
+            </Link>
           </div>
           <button
             className={`p-2 ${

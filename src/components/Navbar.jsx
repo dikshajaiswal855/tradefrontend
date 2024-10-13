@@ -19,7 +19,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     { name: "Pricing", path: "/pricing" },
     { name: "Docs", path: "/docs" },
     { name: "Support", path: "/support" },
-    { name: "Calculate", path: "/calculate" },
+    { name: "Product", path: "/product" },
   ];
 
   const toggleMobileMenu = () => {
