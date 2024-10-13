@@ -153,11 +153,11 @@ const Navbar = ({ theme, toggleTheme }) => {
             Support
           </Link>
           <Link
-            to="/calculate"
+            to="/product"
             onClick={toggleMobileMenu}
             className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
-            Calculate
+            Product
           </Link>
 
           <Link
