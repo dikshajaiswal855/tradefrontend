@@ -25,6 +25,23 @@ body {
   -moz-appearance: textfield;
 }
 
+* {
+            font-family: "Poppins", sans-serif;
+
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .fade-in2 {
+            animation: fadeIn 4s ease-in-out;
+        }
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

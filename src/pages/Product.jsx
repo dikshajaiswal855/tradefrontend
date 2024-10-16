@@ -20,7 +20,8 @@ const Product = ({ theme, toggleTheme }) => {
       color: "hover:border-orange-500",
       description:
         "Easily navigate the Harmonized System (HS) codes to classify products for import and export. This comprehensive list helps businesses and individuals identify the correct product codes for global trade, ensuring accuracy and compliance with international trade regulations.",
-    },
+      url: "/HS?snb=n",  // here, snb meanse Sidenavbar and "=n" means "no" => no sidenavbar
+      },
     {
       title: "Landed Cost",
       logo: logo2,
