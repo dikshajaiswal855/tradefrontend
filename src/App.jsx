@@ -8,6 +8,8 @@ import Support from "./pages/Support";
 import Calculate from "./pages/Calculate";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import HSView from './pages/hs_view';
+
 
 const App = () => {
   // State to handle theme (dark or light)
@@ -51,6 +53,8 @@ const App = () => {
             <Route path="/calculate" element={<Calculate theme={theme} />} />
             <Route path="/login" element={<Login theme={theme} />} />
             <Route path="/signup" element={<SignUp theme={theme} />} />
+            <Route path="/hs-view" element={<HSView theme={theme} />} />
+
           </Routes>
         </div>
       </Router>
