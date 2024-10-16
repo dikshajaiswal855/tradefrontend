@@ -31,7 +31,7 @@ const SideNavbar = () => {
       subRoutes: [
         {
           title: "HS",
-          url: "/HS",
+          url: "/hs",
         },
         {
           title: "Calculate",
