@@ -74,7 +74,7 @@ const Product = ({ theme, toggleTheme }) => {
         Global <span className="text-[#407BFF]">Trade Data</span> and{" "}
         <span className="text-[#407BFF]">Compliance Tools</span>
       </h1>
-      <div className="p-5 lg:px-56 flex flex-col justify-center items-center">
+      <div className="p-5 lg:px-56 flex flex-col justify-center items-center ">
         <div className="flex flex-col gap-4 justify-center items-center">
           {featuresArray.map((feature, index) => {
             return (

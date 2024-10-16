@@ -34,7 +34,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav
       className={`flex fixed w-full  ${theme === "light" ? "bg-white" : "bg-gray-900"} justify-between items-center ${
         url == "/login" || url == "/signup" ? "border-none" : "border-b"
-      } p-4 px-6 lg:px-16`}
+      } p-4 px-6 lg:px-16 z-50`}
     >
       {/* Logo */}
       <div className="nav_logo_name">

@@ -17,7 +17,7 @@ const Footer = ({ theme }) => {
     { title: "Policies", link: "/policies" },
   ];
   return (
-    <div className=" flex flex-col gap-8 justify-center items-center border-t-2 pt-7">
+    <div className="relative w-full flex flex-col gap-8 justify-center items-center border-t-2 pt-7">
       <img
         src={theme === "light" ? LightVexayaLogo : DarkVexayaLogo}
         alt="Vexaya-logo"
@@ -27,7 +27,7 @@ const Footer = ({ theme }) => {
         Navigating Global Trade with Ease & Streamlining Trade Processes for
         Success
       </p>
-      <ul className="lg:flex grid grid-cols-5 px-10 mx-auto text-center lg:gap-4 gap-2 gap-x-3 text-[12px]">
+      <ul className="flex flex-wrap px-10 mx-auto text-center lg:gap-4 gap-2 gap-x-3 text-[12px]">
         {otherPagesArray.map((page, index) => (
           <Link key={index} to={page.link}>
             <li className="hover:underline">{page.title}</li>

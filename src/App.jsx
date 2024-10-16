@@ -8,6 +8,7 @@ import Support from "./pages/Support";
 import Product from "./pages/Product";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Profile from "./components/Profile/Profile_With_SIdenavbar";
 
 const App = () => {
   // State to handle theme (dark or light)
@@ -54,7 +55,8 @@ const App = () => {
             <Route path="/support" element={<Support theme={theme} />} />
             <Route path="/product" element={<Product theme={theme} />} />
             <Route path="/login" element={<Login theme={theme} />} />
-            <Route path="/signup" element={<SignUp theme={theme} />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/profile" element={<Profile theme={theme} />} />
           </Routes>
         </div>
       </Router>
