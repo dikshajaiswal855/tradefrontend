@@ -4,8 +4,8 @@ import logo from "../assets/logo.png";
 import burger from "../assets/burger.png";
 import cross from "../assets/cross.png";
 import darklogo from "../assets/logodarkbg.png";
-import moon from "../assets/moonn.png";  
-import sun from "../assets/brightness (1).png"; 
+import moon from "../assets/moonn.png";
+import sun from "../assets/brightness (1).png";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,6 +20,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     { name: "Docs", path: "/docs" },
     { name: "Support", path: "/support" },
     { name: "Product", path: "/product" },
+    { name: "Profile", path: "/profile" },
   ];
 
   const toggleMobileMenu = () => {
@@ -32,14 +33,20 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <nav
-      className={`flex fixed w-full  ${theme === "light" ? "bg-white" : "bg-gray-900"} justify-between items-center ${
+      className={`flex fixed w-full  ${
+        theme === "light" ? "bg-white" : "bg-gray-900"
+      } justify-between items-center ${
         url == "/login" || url == "/signup" ? "border-none" : "border-b"
-      } p-4 px-6 lg:px-16`}
+      } p-4 px-6 lg:px-16 z-50`}
     >
       {/* Logo */}
       <div className="nav_logo_name">
-      <Link to="/">
-          <img src={theme === "light" ? logo : darklogo} alt="Logo" className="h-[18px] lg:h-8" />
+        <Link to="/">
+          <img
+            src={theme === "light" ? logo : darklogo}
+            alt="Logo"
+            className="h-[18px] lg:h-8"
+          />
         </Link>
       </div>
 
@@ -55,16 +62,19 @@ const Navbar = ({ theme, toggleTheme }) => {
             to={route.path}
             className={`${
               url == route.path ? "text-blue-500" : ""
-            } hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg py-1 px-2`}
+            } hover:bg-[#E3EBFD] dark:hover:bg-gray-700 transition-all duration-200 hover:text-blue-500 rounded-lg py-1 px-2`}
           >
             {route.name}
           </Link>
         ))}
       </div>
-        
+
       {/* Theme Toggle Button */}
       <div className="flex items-center">
-        <button onClick={toggleTheme} className="mr-4 p-2 rounded-lg hover:bg-[#E3EBFD]">
+        <button
+          onClick={toggleTheme}
+          className="mr-4 p-2 rounded-lg hover:bg-[#E3EBFD]"
+        >
           <img
             src={theme === "light" ? moon : sun}
             alt={theme === "light" ? "Dark Mode" : "Light Mode"}
@@ -105,12 +115,18 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } absolute top-0 left-0 w-full h-screen ${theme === "light" ? "bg-white" : "bg-gray-900"} z-10 lg:hidden`}
+        } absolute top-0 left-0 w-full h-screen ${
+          theme === "light" ? "bg-white" : "bg-gray-900"
+        } z-10 lg:hidden`}
       >
         <div className="flex justify-between items-center p-4 px-6">
           {/* Logo */}
           <Link to="/">
-          <img src={theme === "light" ? logo : darklogo} alt="Logo" className="h-4" />
+            <img
+              src={theme === "light" ? logo : darklogo}
+              alt="Logo"
+              className="h-4"
+            />
           </Link>
 
           {/* Close Icon */}
@@ -153,11 +169,11 @@ const Navbar = ({ theme, toggleTheme }) => {
             Support
           </Link>
           <Link
-            to="/calculate"
+            to="/product"
             onClick={toggleMobileMenu}
             className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
           >
-            Calculate
+            Product
           </Link>
 
           <Link

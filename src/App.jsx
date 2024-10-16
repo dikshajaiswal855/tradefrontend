@@ -5,11 +5,11 @@ import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Docs from "./pages/Docs";
 import Support from "./pages/Support";
-import Calculate from "./pages/Calculate";
+import Product from "./pages/Product";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import HSView from './pages/hs_view';
-
+import Profile from "./components/Profile/Profile_With_SIdenavbar";
 
 const App = () => {
   // State to handle theme (dark or light)
@@ -39,22 +39,26 @@ const App = () => {
   };
 
   return (
-    <div className={`${theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"} transition-all duration-500 ease-in-out`}>
+    <div
+      className={`${
+        theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
+      } transition-all duration-500 ease-in-out`}
+    >
       <Router>
         {/* Pass theme and toggleTheme to the Navbar */}
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <div className="pt-[70px]">
+        <div className="">
           <Routes>
             {/* Pass the theme prop to the pages */}
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/pricing" element={<Pricing theme={theme} />} />
             <Route path="/docs" element={<Docs theme={theme} />} />
             <Route path="/support" element={<Support theme={theme} />} />
-            <Route path="/calculate" element={<Calculate theme={theme} />} />
+            <Route path="/product" element={<Product theme={theme} />} />
             <Route path="/login" element={<Login theme={theme} />} />
             <Route path="/signup" element={<SignUp theme={theme} />} />
             <Route path="/hs-view" element={<HSView theme={theme} />} />
-
+            <Route path="/profile" element={<Profile theme={theme} />} />
           </Routes>
         </div>
       </Router>
