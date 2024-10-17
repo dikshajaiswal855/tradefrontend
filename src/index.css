@@ -243,3 +243,16 @@ button:focus-visible {
   -webkit-animation: keyboard05 var(--duration) linear infinite;
   animation: keyboard05 var(--duration) linear infinite;
 }
+
+@keyframes AppearFromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.Animation-AppearFromLeft {
+  animation: AppearFromLeft 0.5s ease-in-out;
+}

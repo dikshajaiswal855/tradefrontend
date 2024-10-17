@@ -1,16 +1,15 @@
-// this is profile component used in both profileOnly.jsx and Profile_With_Sidenavbar.jsx 
+// this is profile component used in both profileOnly.jsx and Profile_With_Sidenavbar.jsx
 
 import React from "react";
-
 
 const ProfileComponent = () => {
   return (
     <>
-      <div className="m-2 w-full">
-        <h1 className="text-2xl font-bold mx-12">Profile</h1>
+      <div className="lg:m-2 w-full p-5">
+        <h1 className="text-2xl font-bold lg:mx-12">Profile</h1>
       </div>
-      <div className="w-[90%] min-h-[70vh] flex flex-row gap-7 mx-20 m-5">
-        <div className="flex w-[50%] h-max rounded-3xl flex-col gap-2 bg-gray-100 dark:bg-gray-800">
+      <div className="lg:w-[90%] w-full min-h-[70vh] flex flex-col lg:flex-row gap-7 lg:mx-20 m-5 p-5">
+        <div className="flex lg:w-[50%] h-max rounded-3xl flex-col gap-2 bg-gray-100 dark:bg-gray-800">
           <div className="photos h-[190px] ">
             <div className="coverPhoto relative w-full h-36 bg-black rounded-t-3xl"></div>
             <div className="absolute w-fit h-24 flex justify-center items-center top-[250px] ml-7">
@@ -30,7 +29,7 @@ const ProfileComponent = () => {
             {/* <span className="text-xs text-gray-500">{username}</span> */}
           </div>
         </div>
-        <div className="flex w-[50%] h-[50%] flex-col gap-5">
+        <div className="flex lg:w-[50%] h-[50%] flex-col gap-5">
           <div className="flex rounded-3xl flex-col gap-2 bg-gray-100 dark:bg-gray-800 p-4">
             <h1 className="font-bold">Personal information</h1>
             <div>
