@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // assests
 import logo1 from "../assets/logo/Vector.svg";
@@ -13,8 +14,10 @@ import faq4Logo from "../assets/logo/si_barcode-line (1).svg";
 import Footer from "../components/Footer";
 
 const Product = ({ theme, toggleTheme }) => {
+  const navigate = useNavigate();
   const featuresArray = [
     {
+      url: "/hs",
       title: "HS Classify List",
       logo: logo1,
       color: "hover:border-orange-500",
@@ -83,6 +86,11 @@ const Product = ({ theme, toggleTheme }) => {
                 <div
                   key={index}
                   className={`rounded-lg min-h-[100px] border-2 p-4 ${feature.color} transition-all cursor-pointer`}
+                  onClick={() => {
+                    if (feature.url) {
+                      navigate(feature.url); // Navigate to the specified URL on click
+                    }
+                  }}
                 >
                   <h1 className="flex gap-5 justify-start items-end">
                     <img src={feature.logo} alt={`feature${index + 1}-logo`} />
