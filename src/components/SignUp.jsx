@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //assests
 import GoogleLogo from "../assets/Google__G__logo.svg.png";
 
-const SignUp = () => {
+const SignUp = ({ theme, toggleTheme }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -56,7 +56,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[90vh]">
+    <div className="flex justify-center items-center overflow-hidden h-[100vh]">
       <div>
         <h1 className="text-2xl font-bold">Welcome Back! Please Log In</h1>
         <div className="flex flex-col justify-center items-center gap-2 my-2 text-sm">
@@ -67,7 +67,10 @@ const SignUp = () => {
               name=""
               id=""
               placeholder="Enter your name"
-              className=" border-[2px] rounded-md p-2 w-full"
+              className={` border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white" : "bg-gray-900"
+              }`}
+              // {`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
@@ -79,7 +82,9 @@ const SignUp = () => {
               name=""
               id="PhnNo"
               placeholder="Enter your phone number"
-              className="NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full"
+              className={`NumInputWithNoScrollbar border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white" : "bg-gray-900"
+              }`}
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
             />
@@ -90,8 +95,8 @@ const SignUp = () => {
               name=""
               id="country"
               className={`border-[2px] rounded-md p-2 w-full ${
-                country === "" ? "text-gray-400" : "text-black"
-              }`}
+                country === "" ? "text-gray-400" : "text-grey-800"
+              } ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
               onChange={(e) => setCountry(e.target.value)}
             >
               <option value="" className="text-gray-300">
@@ -102,7 +107,9 @@ const SignUp = () => {
                   <option
                     key={index}
                     value={country.value}
-                    className="text-black"
+                    className={`${
+                      theme === "light" ? "bg-white " : "bg-gray-600"
+                    } `}
                   >
                     {country.name}
                   </option>
@@ -117,7 +124,9 @@ const SignUp = () => {
               name=""
               id=""
               placeholder="Enter your email"
-              className=" border-[2px] rounded-md p-2 w-full"
+              className={` border-[2px] rounded-md p-2 w-full ${
+                theme === "light" ? "bg-white " : "bg-gray-900"
+              }`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -130,7 +139,9 @@ const SignUp = () => {
                 name=""
                 id="password"
                 placeholder="Enter your password"
-                className="outline-none w-[88%] px-2"
+                className={`outline-none w-[88%] px-2 ${
+                  theme === "light" ? "bg-white" : "bg-gray-900"
+                }`}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -153,9 +164,11 @@ const SignUp = () => {
               onChange={(e) => setIsTermsAndConditionsChecked(e.target.checked)}
             />
             <span>I accept the </span>
-            <span className="cursor-pointer hover:underline text-[#407BFF]">
-              Terms and Conditions
-            </span>
+            <Link to={"/termsAndConditions"}>
+              <span className="cursor-pointer hover:underline text-[#407BFF]">
+                Terms and Conditions
+              </span>
+            </Link>
           </div>
           <button
             className={`p-2 ${
