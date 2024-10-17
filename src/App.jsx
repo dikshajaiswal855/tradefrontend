@@ -8,7 +8,7 @@ import Support from "./pages/Support";
 import Product from "./pages/Product";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import HSView from './pages/hs_view';
+import HSView from './pages/hsComp';
 import Profile from "./components/Profile/Profile_With_SIdenavbar";
 
 const App = () => {
