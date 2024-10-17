@@ -21,7 +21,7 @@ const HSView = ({ theme, toggleTheme }) => {
   };
 
   return (
-    <div className=" p-8 max-w-2xl mx-auto pt-14 h-[160vh] md:h-[120vh]">
+    <div className=" p-8 max-w-2xl mx-auto pt-20 h-[160vh] md:h-[120vh]">
       <a href="https://example.com">
         <h6 className="text-blue-600  mb-4">HS view</h6>
       </a>

@@ -175,7 +175,13 @@ const Navbar = ({ theme, toggleTheme }) => {
           >
             Product
           </Link>
-
+          <Link
+            to="/profile"
+            onClick={toggleMobileMenu}
+            className="ml-4  w-[90%] py-1 px-2 text-balance  hover:bg-[#E3EBFD] hover:text-blue-500 rounded-lg"
+          >
+            Profile
+          </Link>
           <Link
             to="/login"
             onClick={toggleMobileMenu}
