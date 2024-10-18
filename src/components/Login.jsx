@@ -38,20 +38,26 @@ const Login = ({ theme, toggleTheme }) => {
                 name=""
                 id=""
                 placeholder="Enter your email"
-                className={` border-[2px] rounded-md p-2 w-full ${theme === "light" ? "bg-white " : "bg-gray-900"}`}
+                className={` border-[2px] dark:border-gray-700  rounded-md p-2 w-full ${
+                  theme === "light" ? "bg-white " : "bg-gray-800"
+                }`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="w-full flex flex-col gap-2">
               <h3 className="">Password</h3>
-              <div className="flex flex-row justify-between border-[2px] rounded-md px-1">
+              <div
+                className={`${
+                  theme === "light" ? "bg-white" : "bg-gray-800"
+                } flex flex-row justify-between border-[2px] dark:border-gray-700 rounded-md px-1`}
+              >
                 <input
                   type="password"
                   name=""
                   id="password"
                   placeholder="Enter your password"
-                  className={`outline-none w-[88%] px-2 ${theme === "light" ? "bg-white" : "bg-gray-900"}`}
+                  className={`outline-none w-[88%] px-2 bg-transparent`}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -80,7 +86,7 @@ const Login = ({ theme, toggleTheme }) => {
           </div>
           <div className="my-4">
             <button
-              className="w-full p-2 text-sm hover:bg-gray-100 transition-all rounded-md border-2 flex justify-center items-center gap-2"
+              className="w-full p-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 transition-all rounded-md border-2 flex  dark:border-gray-700 justify-center items-center gap-2"
               onClick={() => {}}
             >
               <img src={GoogleLogo} alt="" width={15} className="" />
