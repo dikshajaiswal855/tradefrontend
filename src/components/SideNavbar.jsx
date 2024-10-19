@@ -72,7 +72,7 @@ const SideNavbar = () => {
       subRoutes: [
         {
           title: "HS",
-          url: "/HS",
+          url: "/hs",
         },
         {
           title: "Calculate",
@@ -104,7 +104,7 @@ const SideNavbar = () => {
     <>
       {/* desktop navbar */}
       <div
-        className={`fixed left-0 top-0 pt-24 hidden lg:flex flex-col min-h-screen lg:w-60 dark:bg-gray-900 border-r dark:border-gray-700 p-3`}
+        className={`fixed left-0 top-0 pt-24 hidden lg:flex flex-col min-h-screen lg:w-60 dark:bg-gray-900 bg-white border-r dark:border-gray-700 p-3`}
       >
         {routesArray.map((route, index) => {
           const svgLogo = route.logo;
@@ -151,15 +151,15 @@ const SideNavbar = () => {
         <div
           className={` ${
             isSideNavOpen ? "hidden" : "flex"
-          } pt-24 w-12 fixed left-0 dark:bg-gray-900 border-r dark:border-gray-700 flex-col min-h-screen lg:hidden  items-center`}
+          } pt-24 w-12 fixed left-0 dark:bg-gray-900 bg-white border-r dark:border-gray-700 flex-col min-h-screen lg:hidden  items-center`}
           onClick={() => {
             setIsSideNavOpen(true);
           }}
         >
           <div className=" flex flex-col gap-1">
-            <div className="w-8 bg-gray-200 h-1"></div>
-            <div className="w-8 bg-gray-200 h-1"></div>
-            <div className="w-8 bg-gray-200 h-1"></div>
+            <div className="w-8 dark:bg-gray-200 bg-gray-700 h-1"></div>
+            <div className="w-8 dark:bg-gray-200 bg-gray-700 h-1"></div>
+            <div className="w-8 dark:bg-gray-200 bg-gray-700 h-1"></div>
           </div>
         </div>
         {/* mobile navbar after opening */}
