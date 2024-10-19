@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PenIcon from "../assets/lucide_pen-line.svg";
 import Pathicon from "../assets/lsicon_path-outline.svg";
-import Location from "../components/location";
+import Location from "../components/Location";
 
 const HSView = ({ theme, toggleTheme }) => {
   const [viewOption, setViewOption] = useState(""); // Track which option is selected
