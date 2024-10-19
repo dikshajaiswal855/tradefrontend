@@ -23,8 +23,8 @@ const Product = ({ theme, toggleTheme }) => {
       color: "hover:border-orange-500",
       description:
         "Easily navigate the Harmonized System (HS) codes to classify products for import and export. This comprehensive list helps businesses and individuals identify the correct product codes for global trade, ensuring accuracy and compliance with international trade regulations.",
-        // here, snb meanse Sidenavbar and "=n" means "no" => no sidenavbar
-      },
+      // here, snb meanse Sidenavbar and "=n" means "no" => no sidenavbar
+    },
     {
       title: "Landed Cost",
       logo: logo2,
@@ -106,7 +106,9 @@ const Product = ({ theme, toggleTheme }) => {
         </div>
         <div className="flex lg:flex-row flex-col gap-10 my-10">
           <div className="lg:w-[60%]">
-            <h1 className=" font-bold lg:text-[16px] text-2xl my-3">Why Our Platform?</h1>
+            <h1 className=" font-bold lg:text-[16px] text-2xl my-3">
+              Why Our Platform?
+            </h1>
             <p className="text-[12px]">
               At Vexaya, we simplify global trade for businesses of all sizes.
               Our platform is designed to help you navigate complex trade
@@ -152,7 +154,9 @@ const Product = ({ theme, toggleTheme }) => {
           </div>
         </div>
         <div>
-          <h1 className=" font-bold lg:text-[16px] text-2xl my-3">General Questions</h1>
+          <h1 className=" font-bold lg:text-[16px] text-2xl my-3">
+            General Questions
+          </h1>
           <p className="text-[12px] lg:w-[60%]">
             Welcome to our FAQ section! Here, you will find answers to the most
             common questions about our platform and services. Whether
