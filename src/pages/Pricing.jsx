@@ -1,7 +1,8 @@
 import React from 'react';
+import PricingComponent from '../components/PricingComponent';
 
-const Pricing = () => {
-  return <h1>Here are our Pricing Options</h1>;
+const Pricing = ({theme}) => {
+  return <><PricingComponent theme={theme}/></>;
 };
 
 export default Pricing;
