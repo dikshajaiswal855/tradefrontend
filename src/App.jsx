@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import HSView from './pages/hsComp';
 import Profile from "./components/Profile/Profile_With_SIdenavbar";
+import TandC from "./pages/TermsAndConditions";
 
 const App = () => {
   // State to handle theme (dark or light)
@@ -59,6 +60,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp theme={theme} />} />
             <Route path="/hs" element={<HSView theme={theme} />} />
             <Route path="/profile" element={<Profile theme={theme} />} />
+            <Route path="/TermsAndConditions" element={<TandC theme={theme} />} />
           </Routes>
         </div>
       </Router>

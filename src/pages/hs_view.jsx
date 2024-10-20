@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PenIcon from "../assets/lucide_pen-line.svg";
 import Pathicon from "../assets/lsicon_path-outline.svg";
-import Location from "../components/location";
+import Location from "../components/Location";
 
 const HSView = ({ theme, toggleTheme }) => {
   const [viewOption, setViewOption] = useState(""); // Track which option is selected
@@ -27,7 +27,7 @@ const HSView = ({ theme, toggleTheme }) => {
         from={{ title: "Product", url: "/product" }}
         to={{ title: "HS", url: "/hs" }}
       />
-      <div className=" lg:p-8 w-full pt-40 h-[160vh] md:h-[120vh]">
+      <div className=" lg:pl-[198px] w-full pt-10 h-[160vh] md:h-[120vh]">
         <a href="https://example.com">
           <h6 className="text-blue-600  mb-4">HS view</h6>
         </a>

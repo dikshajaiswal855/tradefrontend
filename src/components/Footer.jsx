@@ -13,7 +13,7 @@ const Footer = ({ theme }) => {
     { title: "FAQ", link: "/faq" },
     { title: "About us", link: "/aboutus" },
     { title: "Contact us", link: "/contactus" },
-    { title: "Terms & Conditions", link: "/termsAndConditions" },
+    { title: "Terms & Conditions", link: "/TermsAndConditions" },
     { title: "Policies", link: "/policies" },
   ];
   return (
