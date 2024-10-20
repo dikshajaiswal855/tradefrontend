@@ -1,5 +1,5 @@
 import React from "react";
-import Location from "./location";
+import Location from "./Location";
 
 import faq1Logo from "../assets/logo/si_barcode-line.svg";
 import faq2Logo from "../assets/logo/iconoir_calculator.svg";
