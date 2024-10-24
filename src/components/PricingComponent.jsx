@@ -1,9 +1,10 @@
 import React from "react";
 import Location from "./Location";
-
+import Footer from "../components/Footer";
 import faq1Logo from "../assets/logo/si_barcode-line.svg";
 import faq2Logo from "../assets/logo/iconoir_calculator.svg";
 import faq3Logo from "../assets/logo/raphael_globe.svg";
+// import Footer from "../components/Footer";
 
 const PricingComponent = ({ theme }) => {
   const PricingPlanArray = [
@@ -191,6 +192,7 @@ const PricingComponent = ({ theme }) => {
             </div>
           </div>
         </div>
+        <Footer theme={theme} />
       </div>
     </>
   );

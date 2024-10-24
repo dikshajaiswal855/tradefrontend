@@ -1,11 +1,47 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+import Footer from "../components/Footer";
+import backicon from "../assets/back.png";
 
-const TermsAndConditions = () => {
+const TermsAndConditions = ({ theme }) => {
+  const navigate = useNavigate();
+
+  // Function to handle back button click
+  const handleBackClick = () => {
+    navigate(-1); // Navigates to the previous page
+  };
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold text-center pt-20 mb-6">
+  <div className={`min-h-screen px-6 py-4 ${theme === 'dark' ? 'text-white' : 'text-[#222222]' } `}>
+   
+       <div className="container  mx-auto p-8 ">
+       {/* Back Button */}
+      {/* <div className=" flex flex-col md:flex-row items-center justify-center md:justify-between">
+       <button 
+        className="pr-3 h-[40px] w-[85px] flex font-semibold bg-gray-200 text-gray-800 mt-20 p-2 rounded hover:bg-gray-300" 
+        onClick={handleBackClick}
+      >
+        <img className="w-4 mr-2 mt-1" src={backicon} alt="" />     Back
+      </button>
+      <h1 className="text-3xl  font-bold text-center  pt-20 mb-6">
         Vexaya's Terms and Conditions
       </h1>
+      </div> */}
+      <div className="flex flex-col md:flex-row justify-center md:justify-between w-full">
+  {/* Back Button */}
+  <button 
+    className=" pr-3 h-[40px] w-[85px] flex font-semibold bg-gray-200 text-gray-800 mt-20 p-2 rounded hover:bg-gray-300" 
+    onClick={handleBackClick}
+  >
+    <img className="w-4 mr-2 mt-1" src={backicon} alt="" />     
+    Back
+  </button>
+
+  {/* Centered Heading */}
+  <h1 className="flex-1 text-3xl font-bold text-center pt-20 mb-6">
+    Vexaya's Terms and Conditions
+  </h1>
+</div>
+
       <p>
         Welcome to{" "}
         <a href="http://www.vexaya.com" className="text-blue-500">
@@ -326,7 +362,7 @@ const TermsAndConditions = () => {
             CAUSE OF ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS
             PERMANENTLY BARRED.
           </p>
-        <div className=" items-center space-x-2 pt-4">
+        {/* <div className=" items-center space-x-2 pt-4">
           <label className="flex">
             <input type="checkbox" className="form-checkbox" />
             <span className="text-gray-700 pl-2">
@@ -336,9 +372,11 @@ const TermsAndConditions = () => {
           <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
             Submit
           </button>
-        </div>
+        </div> */}
       </p>
     </div>
+    <Footer theme={theme} />
+  </div>
   );
 };
 

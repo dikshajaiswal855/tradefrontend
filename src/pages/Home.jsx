@@ -1,5 +1,6 @@
 import React from "react";
 import map from "../assets/map2.svg";
+import Footer from "../components/Footer";
 
 const Home = ({ theme, toggleTheme }) => {
   return (
@@ -44,6 +45,7 @@ const Home = ({ theme, toggleTheme }) => {
       <div className="flex w-[600px] md:w-[1200px] fade-in2">
         <img src={map} alt="Map showing trade data" />
       </div>
+      <Footer theme={theme} />
     </div>
   );
 };
