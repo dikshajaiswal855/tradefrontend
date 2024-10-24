@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import SideNav from "../SideNavDocs";
-import DocsComponent from "../Docs/DocsComponent";
+// import DocsComponent from "../Docs/DocsComponent";
 
 const Profile = ({ theme }) => {
   return (
@@ -19,7 +19,7 @@ const Profile = ({ theme }) => {
       ) : (
         <>
           <SideNav />
-          <DocsComponent/>
+          {/* <DocsComponent/> */}
         </>
       )}
     </div>
